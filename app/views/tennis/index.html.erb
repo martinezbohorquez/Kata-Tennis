@@ -1,0 +1,31 @@
+<h1>Listing tennis</h1>
+
+<table>
+  <tr>
+    <th>Jugador1</th>
+    <th>Jugador2</th>
+    <th>P1</th>
+    <th>P2</th>
+    <th>Ganador</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tennis.each do |tenni| %>
+  <tr>
+    <td><%= tenni.jugador1 %></td>
+    <td><%= tenni.jugador2 %></td>
+    <td><%= tenni.p1 %></td>
+    <td><%= tenni.p2 %></td>
+    <td><%= tenni.ganador %></td>
+    <td><%= link_to 'Show', tenni %></td>
+    <td><%= link_to 'Edit', edit_tenni_path(tenni) %></td>
+    <td><%= link_to 'Destroy', tenni, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tenni', new_tenni_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Jugador1:</b>
+  <%= @tenni.jugador1 %>
+</p>
+
+<p>
+  <b>Jugador2:</b>
+  <%= @tenni.jugador2 %>
+</p>
+
+<p>
+  <b>P1:</b>
+  <%= @tenni.p1 %>
+</p>
+
+<p>
+  <b>P2:</b>
+  <%= @tenni.p2 %>
+</p>
+
+<p>
+  <b>Ganador:</b>
+  <%= @tenni.ganador %>
+</p>
+
+
+<%= link_to 'Edit', edit_tenni_path(@tenni) %> |
+<%= link_to 'Back', tennis_path %>
